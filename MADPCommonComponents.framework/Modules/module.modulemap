@@ -1,0 +1,6 @@
+framework module MADPCommonComponents {
+  umbrella header "MADPCommonComponents.h"
+
+  export *
+  module * { export * }
+}
