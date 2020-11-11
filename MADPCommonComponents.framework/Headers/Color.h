@@ -13,6 +13,11 @@
 #define RGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]//带透明度的rgb色
 #define RGBD(r,g,b) RGBA(r,g,b,1)//默认透明度为1的颜色
 
+//十六进制颜色
+#define UIColorFromRGBHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+// 十六进制颜色 + 透明度
+#define UIColorFromRGBHexAndA(rgbValue,alphaValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:alphaValue]
+
 #define COLOR_APP_ORANGE  RGBD(255,235,202)//系统橘黄色
 #define COLOR_WHITE       [UIColor  whiteColor] //白色
 

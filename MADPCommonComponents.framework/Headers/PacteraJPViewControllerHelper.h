@@ -30,6 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// 返回显示view的对应ViewController
 + (nullable UIViewController *)findBelongViewControllerForView:(UIView *)view;
 
+
+#pragma mark - findKeyWindow
+/// 找到keywindow
++ (nullable UIWindow *)findKeyWindow;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MADPCommonComponents"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "CommonComponents of Pactare"
 
   # This description is used to generate tags and improve search results.
@@ -91,10 +91,6 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "MADPCommonComponents.framework/**/*.{h,m}","MADPCommonComponents.framework"
-  #spec.exclude_files = "Classes/Exclude"
-
-  # spec.public_header_files = "Classes/**/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -117,8 +113,10 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+   spec.vendored_frameworks = "MADPCommonComponents.framework"
+
+   #spec.framework  = "CoreLocation.framework"
+  
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"

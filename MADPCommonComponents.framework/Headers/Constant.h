@@ -46,13 +46,29 @@
 #define HEIGHT_MARGIN_LEFT     15.0f //左边间隔
 #define HEIGHT_MARGIN_RIGHT    15.0f //右边间隔
 
-//navigation
-#define HEIGHT_NAVIGATIONBAR   (iPhoneX ? 88 : 64) //竖屏navigationBar高度（包含了statubar高度）
-#define HEIGHT_NAVIGATIONBAR_H 49 //横屏navigationBar高度(包含statubar高度)
-#define HEIGHT_STATUBAR        (iPhoneX ? 44 : 20) //状态栏高度（信号，营业商，等）
 
-//tabbar
-#define HEIGHT_TABBAR          (iPhoneX ? 83 : 49) //tabbar高度
+#define kIs_iphone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define kIs_iPhoneX SCREEN_WIDTH >=375.0f && SCREEN_HEIGHT >=812.0f && kIs_iphone
+    
+/*状态栏高度*/ //状态栏高度（信号，营业商，等）
+#define HEIGHT_STATUBAR (CGFloat)(kIs_iPhoneX?(44.0):(20.0))
+/*导航栏高度*/
+#define kNavBarHeight (44)
+/*状态栏和导航栏总高度*/
+#define HEIGHT_NAVIGATIONBAR (CGFloat)(kIs_iPhoneX?(88.0):(64.0))
+/*TabBar高度*/
+#define HEIGHT_TABBAR (CGFloat)(kIs_iPhoneX?(49.0 + 34.0):(49.0))
+/*顶部安全区域远离高度*/
+#define kTopBarSafeHeight (CGFloat)(kIs_iPhoneX?(44.0):(0))
+ /*底部安全区域远离高度*/
+#define kBottomSafeHeight (CGFloat)(kIs_iPhoneX?(34.0):(0))
+/*iPhoneX的状态栏高度差值*/
+#define kTopBarDifHeight (CGFloat)(kIs_iPhoneX?(24.0):(0))
+/*导航条和Tabbar总高度*/ //竖屏navigationBar高度（包含了statubar高度）
+#define kNavAndTabHeight (HEIGHT_NAVIGATIONBAR + HEIGHT_TABBAR)
+
+/*横屏navigationBar高度(包含statubar高度)*/
+#define HEIGHT_NAVIGATIONBAR_H 49.0
 
 // 公用视图
 #define HEIGHT_LINE        1.0f   // 分割线

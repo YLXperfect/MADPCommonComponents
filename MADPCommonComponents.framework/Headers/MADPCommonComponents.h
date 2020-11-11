@@ -24,6 +24,7 @@ FOUNDATION_EXPORT const unsigned char MADPCommonComponentsVersionString[];
 #import <MADPCommonComponents/UIView+frame.h>
 #import <MADPCommonComponents/TQLocationConverter.h>
 #import <MADPCommonComponents/NSString+Hash.h>
+#import <MADPCommonComponents/UIColor+Extend.h>
 #import <MADPCommonComponents/Constant.h>
 #import <MADPCommonComponents/Key.h>
 #import <MADPCommonComponents/Method.h>
